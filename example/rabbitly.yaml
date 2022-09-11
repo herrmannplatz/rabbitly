@@ -1,0 +1,25 @@
+# yaml-language-server: $schema=../schema.json
+
+version: 1
+
+host: ${RABBITMQ_URI}
+
+exchange:
+  name: logs
+  queues:
+    errors:
+      routingKey: logs.error
+      handler: handler.errors
+      prefetch: 1
+      json: true
+      noAck: false
+    warning:
+      routingKey: logs.warning
+      handler: handler.warnings
+      prefetch: 1
+      json: true
+    info:
+      routingKey: logs.info
+      handler: handler.infos
+      prefetch: 1
+      json: true

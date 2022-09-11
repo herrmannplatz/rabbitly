@@ -1,0 +1,9 @@
+{
+  "name": "rabbitly-example",
+  "version": "1.0.0",
+  "description": "rabbitly-example",
+  "main": "handler.js",
+  "scripts": {
+    "start": "../dist/cli.js"
+  }
+}
